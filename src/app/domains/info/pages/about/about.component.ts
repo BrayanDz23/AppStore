@@ -1,7 +1,9 @@
 import { Component, signal } from '@angular/core';
 import { CounterComponent } from './../../../shared/components/counter/counter.component';
-import { CommonModule } from '@angular/common';
+
 import { WaveAudioComponent } from '../../components/wave-audio/wave-audio.component';
+import { HeaderComponent } from '../../../shared/components/header/header.component';
+
 import { HighlightDirective } from './../../../shared/directives/highlight.directive';
 
 
@@ -9,11 +11,11 @@ import { HighlightDirective } from './../../../shared/directives/highlight.direc
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CounterComponent,CommonModule, WaveAudioComponent, HighlightDirective],
+  imports: [CounterComponent, WaveAudioComponent, HighlightDirective, HeaderComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
-export class AboutComponent {
+export default class AboutComponent {
 
   duration = signal(1000);
   message = signal('Hola');

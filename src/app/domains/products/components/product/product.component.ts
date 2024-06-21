@@ -4,10 +4,11 @@ import { Product } from '../../../shared/models/product.model';
 import { CommonModule } from '@angular/common';
 import { ReveersePipe } from '../../../shared/pipes/reveerse.pipe';
 import { TimeAgoPipe } from './../../../shared/pipes/time-ago.pipe';
+import { RouterLinkWithHref } from '@angular/router';
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [CommonModule, ReveersePipe,TimeAgoPipe ],
+  imports: [CommonModule, ReveersePipe,TimeAgoPipe,RouterLinkWithHref ],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
